@@ -1,5 +1,22 @@
 .row div {
+    /* border-bottom: 1px solid black; */
+}
+
+.content-boxes {
+    padding-bottom: 5px;
+}
+
+.content-boxes h2 {
     border-bottom: 1px solid black;
+}
+
+.content-boxes .col-sm-5,
+.content-boxes .col-sm-4,
+.content-boxes .col-sm-7 {
+    /* border-bottom: 1px solid black; */
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-bottom: 7px;
 }
 
 .github-branch .row .col-sm-6 {

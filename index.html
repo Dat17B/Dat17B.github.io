@@ -4,7 +4,8 @@
 <HEAD>
     <meta charset="UTF-8">
     <!-- Latest compiled and minified CSS MyStyleSheet.css-->
-    <link rel="stylesheet" href="./libraries/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libraries/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./libraries/css/bootstrap.extra.css">
     <link rel="stylesheet" href="./libraries/css/MyStyleSheet.css">
 
     <!-- jQuery library -->
@@ -13,6 +14,19 @@
     <!-- Latest compiled JavaScript -->
     <!-- the bundle have popper implemented so no need for separate import -->
     <script src="./libraries/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./libraries/js/bootstrap.extra.js"></script>
+
+    <script>
+        // Trying jQuery js load
+        $(function() {
+            $('#navbarSupportedContent li a').on('click', function(e) {
+                e.preventDefault();
+                var page = $(this).attr('href');
+                $('#content').load(page);
+            });
+        });
+    </script>
+
     <title>Dat17B - Github Page</title>
 </HEAD>
 
@@ -36,6 +50,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./views/codeexamples.html">Code Examples</a>
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="https://github.com/Dat17B/CodeExamples" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Slideshows
@@ -54,14 +69,6 @@
     <div class="container" id="content"></div>
 
     <script>
-        // Trying jQuery js load
-        $(function() {
-            $('#navbarSupportedContent li a').on('click', function(e) {
-                e.preventDefault();
-                var page = $(this).attr('href');
-                $('#content').load(page);
-            });
-        });
         $('#content').load('views/homecontent.html');
     </script>
 </body>
