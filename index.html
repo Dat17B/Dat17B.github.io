@@ -3,8 +3,9 @@
 
 <HEAD>
     <meta charset="UTF-8">
-    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS MyStyleSheet.css-->
     <link rel="stylesheet" href="./libraries/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libraries/css/MyStyleSheet.css">
 
     <!-- jQuery library -->
     <script src="./libraries/js/jquery-3.3.1.min.js"></script>
@@ -27,17 +28,17 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="https://Dat17B.github.io">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/views/semesterplan.html">Semesterplan</a>
+                        <a class="nav-link" href="./views/semesterplan.html">Semesterplan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/views/slideshow.html">Slideshows</a>
+                        <a class="nav-link" href="./views/codeexamples.html">Code Examples</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="https://github.com/Dat17B/CodeExamples" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Code Examples
+                            Slideshows
                           </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="https://github.com/Dat17B/CodeExamples/tree/Collections">Collections</a>
@@ -55,12 +56,14 @@
     <script>
         // Trying jQuery js load
         $(function() {
-            $('#nav-link li a').on('click', function(e) {
+            $('#navbarSupportedContent li a').on('click', function(e) {
                 e.preventDefault();
                 var page = $(this).attr('href');
                 $('#content').load(page);
             });
         });
+
+        $('#content').load('views/homecontent.html');
     </script>
 </body>
 

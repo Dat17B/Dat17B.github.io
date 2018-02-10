@@ -1,0 +1,8 @@
+.row div {
+    border-bottom: 1px solid black;
+}
+
+.github-branch .row .col-sm-6 {
+    min-height: 50px;
+    height: 200px;
+}
